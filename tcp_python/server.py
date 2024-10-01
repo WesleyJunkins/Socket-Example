@@ -9,7 +9,7 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((hostname, port))  # Bind to a specific IP and port
 server_socket.listen(1)  # Listen for incoming connections
 
-print("Server is waiting for a connection...")
+print("Server is waiting for a connection on " + str(hostname) + ":" + str(port))
 
 while True:
     # Continuously wait for client connections

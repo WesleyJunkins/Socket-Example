@@ -13,7 +13,6 @@ while True:
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         
         # Try to connect to the server
-        print("Trying to connect to the server...")
         client_socket.connect(server_address)
         print("Connected to the server!")
 
@@ -30,6 +29,8 @@ while True:
             print(f"Server response: {response.decode('utf-8')}")
 
             counter += 1
+
+            time.sleep(2)
 
     except (socket.error, socket.timeout) as e:
         # If there's a connection failure, wait a bit and try again
